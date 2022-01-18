@@ -1,0 +1,25 @@
+{
+
+    "name": "PowerShell",
+
+    "description": "Build a PowerShell project using PsBuilder."
+
+    "iconName": "oction package",
+
+    "categories": [
+
+        "PowerShell"
+
+    ],
+
+    "filePatterns": [
+
+        "*.ps1",
+
+
+
+
+
+    ]
+
+}
