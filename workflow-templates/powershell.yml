@@ -1,0 +1,31 @@
+name: PowerShell CI
+
+on:
+
+  push:
+
+    branches: [ $default-branch ]
+
+  pull_request:
+
+    branches: [ $default-branch ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          repository: psbuilder/psbuilder
+
+      - name: Install PsBuilder
+
+        run: /home/runner/work/psbuilder/psbuilder/installer.ps1
+        shell: pwsh
+      - name: Build
+        run: /home/runner/work/psbuilder/psbuilder/PsBuilder.init.ps1
+        shell: pwsh
